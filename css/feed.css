@@ -1,0 +1,377 @@
+.main{
+    clear: both;
+}
+article{
+    width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 50px;
+    position: relative;
+}
+
+.post{
+    position: relative;
+    border-radius: 2rem;
+    margin: 0;
+    display: grid;
+
+}
+
+.post header{
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profil-picture img{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profil-picture{
+    height: 3em;
+    width: 3em;
+    margin-left: 1em;
+}
+
+.profil-picture img{
+    max-height: 100%;
+}
+
+.post-pseudo{
+    margin-left: 1em;
+}
+
+.jojo{
+    height: 100%;
+    width: 100%;
+    margin-right: 2rem;
+}
+
+.post-titre{
+
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.post main{
+    width: 100%;
+    max-height: 40em;
+    overflow: hidden;
+}
+
+.main-img-post{
+    min-width: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    border-radius: 2rem;
+}
+
+.post footer{
+    height: 3rem;
+    display: flex;
+}
+.img-delete{
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.img-delete button{
+    border: none;
+    position: relative;
+    right: 1rem;
+
+}
+.img-delete img:hover{
+    cursor: pointer;
+}
+.post footer img{
+    height: 2.2rem;
+    position: relative;
+    bottom: 3px;
+    right: 1rem;
+}
+
+.big-like{
+    margin-left: 2em;
+}
+.big-like div{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.div-sup-like{
+    position: relative;
+    margin-left: 1em;
+    width: 2em;
+}
+
+.like{
+    background-color: black; /*couleur a changer pour le like*/
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+.like::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    background-color: black;    /*couleur a changer pour le like*/
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+.like::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -50%;
+    background-color: black;    /*couleur a changer pour le like*/
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+.liked{
+    background-color: indianred; /*couleur a changer pour le like*/
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+.liked::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    background-color: indianred;    /*couleur a changer pour le like*/
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+.liked::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -50%;
+    background-color: indianred;    /*couleur a changer pour le like*/
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
+.disliked{
+    transform: rotate(-135deg);
+}
+
+.div-sup-dislike{
+    position: relative;
+    width: 2em;
+    margin-left: 1em;
+    bottom: 3px;
+}
+
+main aside{
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 60%;
+}
+.aside{
+    overflow: scroll;
+    margin-top: 2rem;
+    max-height: calc(100% - 5rem) ;
+
+}
+
+.aside::-webkit-scrollbar {
+    width: 5px;
+    position: relative;
+    height: 4px;
+}
+
+/* Track */
+.aside::-webkit-scrollbar-track {
+    background: none;
+
+}
+
+/* Handle */
+.aside::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 3px;
+    height: 5px;
+}
+.grey-stick-aside{
+    width: 287px;
+    height: 2px;
+    border-radius: 5px;
+    z-index: 9;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: lightgray;
+}
+
+.ajout-com{
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    border-radius: 2rem;
+}
+
+.button-show-com{
+    height: 2.5em;
+    border-radius: 2rem;
+}
+.button-show-com button{
+    border: none;
+    border-radius: 2rem;
+}
+.button-show-com img{
+    margin-left: 1rem;
+    height: 2.5em;
+}
+.button-show-com img:hover{
+    cursor: pointer;
+}
+
+.lebouton{
+    background-color: #EBF0FF;
+    margin-left: 0.5em;
+    border: #EBF0FF;
+    color: #EBF0FF;
+}
+.lebouton:hover{
+    cursor: pointer;
+}
+#tadam{
+    display: none;
+}
+
+.form-ajout-com{
+    margin-right: 1rem;
+}
+.form-ajout-com textarea{
+    border-radius: 0.5em;
+}
+.form-ajout-com input{
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: solid #006C76;
+    text-align: center;
+    font-size: 1em;
+    width: 4rem;
+    margin-left: 0.5rem;
+}
+
+.bio{
+    margin: 0 1em 1em;
+    background-color: white;
+    border-radius: 1em;
+    position: relative;
+    max-width: 20rem;
+}
+
+.bio-title{
+    margin: 0 1em;
+    height: 3em;
+
+}
+
+.grey-stick-bio{
+    width: 287px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: lightgray;
+    z-index: 9;
+    position: absolute;
+    left: 16px;
+    top: 49px;
+}
+
+.bio-title h4{
+    font-size: 1.5em;
+
+}
+
+.bio p{
+    margin-top: 0;
+    padding: 1em;
+    font-size: 1.1em;
+    hyphens: auto;
+    word-break: break-word;
+}
+
+p span{
+    font-weight: bold;
+
+}
+
+.com{
+    margin: 1em 1.5em;
+    background-color: white;
+    border-radius: 1em;
+    position: relative;
+    max-width: 20rem;
+}
+.com a{
+    text-decoration-color: #006C76;
+}
+.com a:visited{
+    text-decoration-color: #006C76;
+}
+
+.com-title{
+    margin: 1em;
+    margin-bottom: 0;
+}
+.com-title img{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5em;
+}
+.com-title h4{
+    text-decoration-color: #006C76;
+}
+
+.grey-stick-com{
+    width: 230px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: lightgray;
+    z-index: 9;
+    position: absolute;
+    left: 70px;
+    top: 55px;
+}
+
+.com-text{
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+.com-text p{
+    margin: 0;
+}
+
+
+
+hr{
+    width: 40em;
+    height: 5px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 1em;
+    margin: 2em;
+    margin-right: auto;
+    margin-left: auto;
+}

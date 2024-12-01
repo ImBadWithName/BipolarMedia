@@ -1,0 +1,133 @@
+body{
+    height: 100%;
+    overflow: hidden;
+}
+.register {
+    position: fixed;
+    width: 50em;
+    height: 34em;
+    top: calc(50% - 23em);
+    left: calc(50% - 25em);
+}
+.mainform{
+    border-radius: 2em;
+}
+
+#logo{
+    margin : 2em;
+    margin-bottom: 1em;
+    width: 40em;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.smallform{
+    width: 100%;
+}
+
+.right-form{
+    width: 100%;
+    flex-direction: column;
+}
+
+.input{
+    height: 2.8em;
+    width: 80%;
+    margin: 3%;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    font-size: 1.2em;
+}
+
+.error{
+    margin-top: -0.5em;
+    text-align: center;
+}
+
+.preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.img-preview{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #006C76;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    border: 3px solid #006C76;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-right: 27%;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #006C76;
+    color: white;
+}
+
+.bio {
+    height: 7.2em;
+    width: 80%;
+    margin: 5%;
+    margin-right: 10%;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    font-size: 1.2em;
+}
+
+.button{
+    height: 3em;
+    width: 60%;
+    margin: 5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    font-size: 1.5em;
+}
+
+.conditions {
+    text-align: center;
+    width: 70%;
+    padding-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+.pdfvide {
+    color: black;
+}
+

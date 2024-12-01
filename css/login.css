@@ -1,0 +1,57 @@
+body{
+    height: 100%;
+    overflow: hidden;
+}
+.login {
+    position: fixed;
+    width: 25em;
+    height: 33em;
+    top: calc(50% - 16.5em);
+    left: calc(50% - 12.5em);
+}
+.mainform{
+    border-radius: 2em;
+}
+
+#logo{
+    margin : 2em;
+    margin-bottom: 1em;
+    width: 20em;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+
+    height: 2em;
+    width: 70%;
+    margin: 5%;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    font-size: 1.5em;
+}
+
+.error{
+    margin-top: -0.5em;
+    text-align: center;
+}
+
+.register{
+    flex-direction: column;
+    height: 5em;
+    border-radius: 2em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.register p{
+    margin : 0.5em;
+    font-weight: bold;
+}

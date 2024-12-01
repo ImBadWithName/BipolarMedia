@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:wght@300&family=Righteous&display=swap');
+
+*{
+    font-family: "Lato", sans-serif;
+}
+h2{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+h3{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.space-5{                   /*classes space servent a metre des
+                            espace dans la page*/
+    height: 5em;
+}
+space-10{
+    height: 10em;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+                                /*met le display en flex et change l'alignement de justify*/
+.justify-space-around{
+    display: flex;
+    justify-content: space-around;
+}
+.justify-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.justify-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.justify-start{
+    display: flex;
+    justify-content: start;
+}
+.justify-center{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+                            /*met le display en flex et change l'alignement de align*/
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.lightblue-background{          /*change la couleur du background*/
+    background-color: #EBF0FF;
+}
+.darkblue-background{
+    background-color: #006C76;
+}
+                          /* change la couleur principal*/
+.color-white{
+    color: white;
+}
+.color-black{
+    color: black;
+    text-decoration: none;
+}
+.color-darkblue{
+    color: #006C76;
+}
+.color-lightblue{
+    color: #EBF0FF;
+}
+                        /*change le poid de la police*/
+.bold{
+    font-weight: bold;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.new-window{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.83);
+    z-index: 11;
+}

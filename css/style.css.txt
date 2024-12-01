@@ -1,0 +1,2 @@
+allez voir dans style.css les classes générique à utiliser
+pour la mise en page !

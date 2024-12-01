@@ -1,0 +1,43 @@
+<?php
+
+if(isset($_GET['PostId'])){
+    if($_GET['Value']=="0"){
+        $reqval = "IsLiked";
+    }
+    else{
+        $reqval = "IsDisiked";
+    }
+    echo "l'utilisateur veut : ". $reqval ."<br>";
+    require_once 'config.php';
+    try {
+        $conn = new PDO(DB, USER, PWD);
+    } catch (PDOException $e) {
+        die ("Failed: " . $e);
+    }
+    $query="Select Count(Id)!=0 as rep from Likes Where Likes.UserId=".$_GET['UserId']." and Likes.PostId=".$_GET['PostId'].";";
+
+    $res = $conn->query($query);
+
+    $row = $res->fetchAll();
+    echo var_dump($row)."<br>";
+    if($row[0]['rep']=="0"){
+        echo "le like n'existe pas";
+        $query = "INSERT INTO `Likes` (`PostId`, `UserId`, ".$reqval.") VALUES (?, 2, 1);";
+        echo $query;
+        $reqSub = $conn ->prepare($query);
+        echo $_GET['PostId'];
+        $reqSub->execute([(int)$_GET['PostId']]);
+
+
+    }
+    else{
+        echo "le like existe";
+    }
+    //$res = $conn->query($query);
+    //if (!$res) die ("Failed query : " . $query);
+    $reqSub = $conn ->prepare($query);
+    $res= $reqSub->execute([$_GET['PostId'],2,'1']);
+    echo $res;
+    $conn->query('KILL CONNECTION_ID()');
+    $conn = null;
+}
